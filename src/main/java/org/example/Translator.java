@@ -4,14 +4,13 @@ import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.JsonNode;
 import com.mashape.unirest.http.Unirest;
 import org.json.JSONObject;
-
 import java.awt.*;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
 
 public class Translator {
-    private String[] languages = {"Afrikaans", "Amharic", "Arabic", "Aragonese", "Armenian", "Avaric", "Avestan", "Azerbaijani", "Basque", "Belarusian",
+    private final String[] languages = {"Afrikaans", "Amharic", "Arabic", "Aragonese", "Armenian", "Avaric", "Avestan", "Azerbaijani", "Basque", "Belarusian",
             "Bengali", "Bosnian", "Bulgarian", "Burmese", "Catalan", "Chamorro", "Chechen", "Chichewa", "Chinese", "Chinese Taiwan", "Chinese PRC", "Chinese Hong Kong",
             "Chinese Singapore", "Chinese Macau", "Chuvash", "Cornish", "Corsican", "Cree", "Croatian", "Czech", "Danish", "Dutch", "English", "Esperanto", "Estonian",
             "Finnish", "French", "Fula", "Galician", "Georgian", "German", "Greek", "Gujarati", "Haitian", "Hausa", "Hebrew", "Herero", "Hindi", "Hiri Motu", "Hungarian",
@@ -22,7 +21,7 @@ public class Translator {
             "Pāli", "Romanian", "Russian", "Samoan", "Sardinian", "Scottish Gaelic", "Serbian", "Shona", "Sindhi", "Sinhala", "Slovak", "Slovene", "Somali", "Southern Ndebele",
             "Southern Sotho", "Spanish", "Sundanese", "Swahili", "Swedish", "Tagalog", "Tahitian", "Tajik", "Tamil", "Tatar", "Telugu", "Thai", "Turkish", "Turkmen",
             "Ukrainian", "Urdu", "Uyghur", "Uzbek", "Vietnamese", "Walloon", "Welsh", "Western Frisian", "Xhosa", "Yiddish", "Yoruba"};
-    private String[] langCode = {"af", "am", "ar", "an", "hy", "av", "ae", "az", "eu", "be", "bn", "bs", "bg", "my", "ca", "ch", "ce", "ny", "zh",
+    private final String[] langCode = {"af", "am", "ar", "an", "hy", "av", "ae", "az", "eu", "be", "bn", "bs", "bg", "my", "ca", "ch", "ce", "ny", "zh",
             "zh-tw", "zh-cn", "zh-hk", "zh-sg", "zh-mo", "cv", "kw", "co", "cr", "hr", "cs", "da", "nl", "en", "eo", "et", "fi",
             "fr", "ff", "gl", "ka", "de", "el", "gu", "ht", "ha", "he", "hz", "hi", "ho", "hu", "is", "io", "ig", "id", "ga", "it", "ja", "jv", "kn", "kr",
             "kk", "km", "ki", "rw", "kv", "kg", "ko", "ku", "kj", "ky", "lo", "la", "lv", "li","lt", "lu", "lb", "mk", "mg", "ms", "ml", "mt", "mr",
@@ -51,9 +50,7 @@ public class Translator {
 
     public static void googleIt() throws URISyntaxException, IOException {
         Desktop desktop = Desktop.getDesktop();
-
         desktop.browse(new URI("https://translate.google.com"));
-
     }
 
     private String getLangCode(String language) {

@@ -52,9 +52,11 @@ public class Frame implements ActionListener {
         outputArea.setEditable(false);
         Border border2 = BorderFactory.createTitledBorder("Translation: ");
         outputArea.setBorder(border2);
+        outputArea.setLineWrap(true);
 
         inputArea = new JTextArea();
         inputArea.setBounds(5, 40, 390, 100);
+        inputArea.setLineWrap(true);
         Border border1 =  BorderFactory.createTitledBorder("Enter Text: ");
         inputArea.setBorder(border1);
 
