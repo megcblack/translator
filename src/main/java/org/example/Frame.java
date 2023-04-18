@@ -8,18 +8,18 @@ import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.JsonNode;
 import com.mashape.unirest.http.Unirest;
 import org.json.JSONObject;
-import com.formdev.flatlaf.*;  //intellijthemes.FlatCarbonIJTheme;
+import com.formdev.flatlaf.intellijthemes.FlatCarbonIJTheme;
 import javax.swing.UIManager;
 import javax.swing.BorderFactory;
 import javax.swing.border.Border;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
-//import com.formdev.flatlaf.intellijthemes.FlatXcodeDarkIJTheme;
+import com.formdev.flatlaf.intellijthemes.FlatXcodeDarkIJTheme;
 
 
 public class Frame implements ActionListener {
-    private JFrame frame;
+    private final JFrame frame;
     private JTextArea inputArea;
     private String text;
     private JTextArea outputArea;
